@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "Anonymous Pro", monospace;
+  src: url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap");
+}
+
+body {
+  background-color: rgb(204, 202, 199);
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  font-family: monospace;
+}
+.all {
+  background-color: white;
+  margin: 5%;
+  border-radius: 15px;
+  border-radius: 25px 25px 240px 50px / 25px 25px 140px 25px;
+  padding: 5rem;
+}
+
+::placeholder {
+  letter-spacing: 0.3rem;
+  font-size: 1rem;
+  /* padding: 10px; */
+}
+
+.top {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 5rem;
+  margin-right: 7rem;
+}
+
+.up {
+  opacity: 0.5;
+}
+
+.inputt {
+  height: 3rem;
+  border-radius: 10px;
+  opacity: 0.5;
+}
+
+.mid {
+  display: flex;
+  justify-content: end;
+}
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: rgb(204, 202, 199);
+  position: absolute;
+  top: -2.5rem;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.last {
+  padding-top: 2rem;
+  border-top: 2px solid rgb(143, 143, 143);
+  position: relative;
+}
+
+.answer span {
+  color: rgb(106, 37, 106);
+}
+
+h2 {
+  font-size: 6rem;
+  margin: 0;
+}
+
+input {
+  text-indent: 20px;
+}
+
+@media (max-width: 960px) {
+  h2 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 800px) {
+  .all {
+    margin: 0%;
+  }
+}
+
+@media (min-with: 800px){
+  .all{
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 540px) {
+  .all {
+    max-width: 100%;
+    min-width: 80%;
+    min-height: 70%;
+    margin-bottom: 8rem;
+    padding: 2rem;
+  }
+  .top {
+    flex-direction: column;
+    gap: 1rem;
+    margin-right: 0;
+  }
+
+  .top-inside {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+}
