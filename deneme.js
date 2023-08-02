@@ -85,10 +85,7 @@ function sck(name, value) {
   //uyarilar
   let monthCheck = months[date.month - 1];
   if (date.day > monthCheck) {
-    toastr.error("", "Invalid Input");
-    $(".years").text("- - ");
-    $(".months").text("- - ");
-    $(".days").text("- - ");
+    reset();
   }
 
   if (date.month > 12) {
