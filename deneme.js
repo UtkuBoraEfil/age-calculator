@@ -70,6 +70,7 @@ function sck(name, value) {
   }
 
   function reset() {
+    toastr.error("", "Invalid Input");
     date = {
       day: 0,
       month: 0,
@@ -83,23 +84,24 @@ function sck(name, value) {
     $(".inputt").val("");
   }
   //uyarilar
+  if (date.day > 31) {
+    reset();
+  }
+
   let monthCheck = months[date.month - 1];
   if (date.day > monthCheck) {
     reset();
   }
 
   if (date.month > 12) {
-    toastr.error("", "Invalid Input");
     reset();
   }
 
   if (date.year > currentYear) {
-    toastr.error("", "Invalid Input");
     reset();
   }
 
   if (date.month > currentMonth && date.year === currentYear) {
-    toastr.error("", "Invalid Input");
     reset();
   }
 
